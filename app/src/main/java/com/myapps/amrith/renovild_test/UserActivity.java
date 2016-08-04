@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class UserActivity extends AppCompatActivity {
@@ -18,15 +20,25 @@ public class UserActivity extends AppCompatActivity {
         final TextView mail=(TextView)findViewById(R.id.mailtext);
         final TextView tv=(TextView)findViewById(R.id.Welcome);
         Intent intent=getIntent();
-        String name=intent.getStringExtra("Pname");
+        final String name=intent.getStringExtra("Pname");
         String phone=intent.getStringExtra("Pph");
         String email=intent.getStringExtra("Pem");
         user.setText(name.toString());
         phn.setText(phone.toString());
         mail.setText(email.toString());
-        String message=name+" Welcome To This Application";
+        String message=name+" Welcome To Renovild";
         tv.setText(message);
-
+        Button button=(Button)findViewById(R.id.map);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(UserActivity.this,MapsActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putString("Name",name);
+                intent.putExtras(bundle);
+                UserActivity.this.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -35,19 +47,16 @@ public class UserActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_user, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

@@ -1,0 +1,19 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=A6:41:8B:F3:CD:D8:25:AF:FE:74:B8:2A:21:51:3A:C8:32:5B:AB:C4%3Bcom.myapps.amrith.renovild_test
+
+    You can also add your credentials to an existing key, using this line:
+    A6:41:8B:F3:CD:D8:25:AF:FE:74:B8:2A:21:51:3A:C8:32:5B:AB:C4;com.myapps.amrith.renovild_test
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+               AIzaSyAPToSmdAfK7dPMhGoigIoKIwdMthR8yZo
+    </string>
+
+</resources>

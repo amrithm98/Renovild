@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText user=(EditText)findViewById(R.id.Username);
         final EditText pass=(EditText)findViewById(R.id.password);
         final Button Login=(Button)findViewById(R.id.Login);
-        final TextView reg=(TextView)findViewById(R.id.register);
+        final TextView reg=(TextView)findViewById(R.id.textView);
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

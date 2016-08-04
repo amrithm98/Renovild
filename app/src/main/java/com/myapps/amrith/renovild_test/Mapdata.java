@@ -1,7 +1,7 @@
 package com.myapps.amrith.renovild_test;
 
 /**
- * Created by hp on 17-06-2016.
+ * Created by hp on 19-06-2016.
  */
 
 import com.android.volley.AuthFailureError;
@@ -11,18 +11,15 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterReq extends StringRequest {
-    private static final String URL="http://amrith98.hostingsiteforfree.com/register.php";
+public class Mapdata extends StringRequest {
+    private static final String URL="http://amrith98.hostingsiteforfree.com/saveloc.php";
     private Map<String,String> params;
-
-    public RegisterReq(String Name,String Username,String Password,String Phone,String Email,Response.Listener<String>listener)
+    public Mapdata(String Name,String lat,String lon, Response.Listener<String> listener)
     {   super(Method.POST,URL,listener,null);
         params=new HashMap<>();
         params.put("Name",Name);
-        params.put("Username",Username);
-        params.put("Password",Password);
-        params.put("Phone",Phone);
-        params.put("Email",Email);
+        params.put("Lat", String.valueOf(lat));
+        params.put("Long",String.valueOf(lon));
     }
 
     @Override

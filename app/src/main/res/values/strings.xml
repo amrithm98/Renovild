@@ -5,4 +5,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_app_id">AIzaSyAPToSmdAfK7dPMhGoigIoKIwdMthR8yZo</string>
 </resources>
